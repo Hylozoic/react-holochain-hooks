@@ -1,0 +1,23 @@
+{
+  "name": "react-holochain-hooks",
+  "version": "0.1.0",
+  "description": "React hooks integration of hc-web-client",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robbie Carlton",
+  "license": "GPL-3.0",
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "@holochain/hc-web-client": "^0.4.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5"
+  }
+}
