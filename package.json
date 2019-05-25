@@ -4,6 +4,7 @@
   "description": "React hooks integration of hc-web-client",
   "main": "lib/index.js",
   "scripts": {
+    "build": "./node_modules/.bin/babel src --out-dir lib --presets=@babel/env",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Robbie Carlton",
