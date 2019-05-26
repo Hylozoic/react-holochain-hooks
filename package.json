@@ -4,8 +4,8 @@
   "description": "React hooks integration of hc-web-client",
   "main": "lib/index.js",
   "scripts": {
-    "build": "./node_modules/.bin/babel src --out-dir lib --presets=@babel/env",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./node_modules/.bin/babel src --out-dir lib --presets=@babel/env --ignore '**/*.test.js'",
+    "test": "jest"
   },
   "author": "Robbie Carlton",
   "license": "GPL-3.0",
@@ -19,6 +19,15 @@
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5"
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.8.0",
+    "core-js": "2",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.1",
+    "jest": "^24.8.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6"
   }
 }

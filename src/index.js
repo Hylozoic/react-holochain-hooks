@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { connect } from '@holochain/hc-web-client'
 
-export default function useHolochainConnection (url) {
+export default function useHolochainWebClient (url) {
   var callZomeRef = useRef(() => {})
   var callRef = useRef(() => {})
   var closeRef = useRef(() => {})
