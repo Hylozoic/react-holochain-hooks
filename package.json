@@ -2,7 +2,7 @@
   "name": "react-holochain-hooks",
   "version": "0.1.0",
   "description": "React hooks integration of hc-web-client",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "scripts": {
     "build": "./node_modules/.bin/babel src --out-dir lib --presets=@babel/env --ignore '**/*.test.js'",
     "test": "jest"
