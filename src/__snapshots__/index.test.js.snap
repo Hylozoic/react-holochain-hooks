@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`useHolochainWebClient imports the file 1`] = `"got there"`;
