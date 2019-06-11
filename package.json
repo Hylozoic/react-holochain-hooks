@@ -1,6 +1,6 @@
 {
   "name": "react-holochain-hooks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "React hooks integration of hc-web-client",
   "main": "src/index.js",
   "scripts": {
