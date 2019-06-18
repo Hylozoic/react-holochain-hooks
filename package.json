@@ -1,6 +1,6 @@
 {
   "name": "@hylozoic/react-holochain-hooks",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "React hooks integration of hc-web-client",
   "main": "lib/index.js",
   "scripts": {
