@@ -34,7 +34,7 @@ function MyComponent () {
 }
 ```
 
-Where CONDUCTOR_WEBSOCKET_URL is the url from the websocket interface you set up in your conductor-config.toml file and INSTANCE_ID is the instance id from the same file.
+Where `CONDUCTOR_WEBSOCKET_URL` is the url from the websocket interface you set up in your `conductor-config.toml` file and `INSTANCE_ID` is the instance id from the same file.
 
 ## Details
 
@@ -43,8 +43,11 @@ useHolochainConnection returns an object with four keys.
 `const { callZomeRef, callRef, closeRef, wsRef } = useHolochainConnection(CONDUCTOR_WEBSOCKET_URL)`
 
 `callZomeRef` for calling zome functions. It takes `('instanceId', 'zome', 'funcName')` and returns a function which when called with a params object, calls the specified zome function and returns a promise with the result
+
 `callRef` for calling conductor functions. It takes a string which is the path to the conductor function and returns a function like above.
+
 `closeRef` for closing the connection.
+
 `wsRef` the websocket object (kind of. Actually the object returned by [rpc-websockets](https://github.com/elpheria/rpc-websockets) which is a wrapper for a webscoket and behaves like one in some ways)
 
 These are all [React refs](https://reactjs.org/docs/refs-and-the-dom.html), so to get at the actual function or object you say `callZome.current()`
