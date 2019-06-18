@@ -17,7 +17,7 @@ This is an early version. It works fine, but there is still work to be done on 
 
 ## Basic usage
 
-This is a React hook, so you have to follow the [rules of hooks](https://reactjs.org/docs/hooks-rules.html) in using it.
+This is a React hook, so follow the [rules of hooks](https://reactjs.org/docs/hooks-rules.html).
 
 ```javascript
 import useHolochainConnection from '@hylozoic/react-holochain-hooks'
