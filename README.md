@@ -11,7 +11,7 @@ This is an early version. It works fine, but there is still work to be done on 
 
 # Example App
 
-[Zome Explorer](https://github.com/Hylozoic/zome-explorer) will soon use this module.
+[Zome Explorer](https://github.com/Hylozoic/zome-explorer) uses this module. See [App.js](https://github.com/Hylozoic/zome-explorer/blob/master/src/App/App.js).
 
 # Usage
 
