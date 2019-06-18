@@ -19,7 +19,7 @@ This is an early version. It works fine, but there is still work to be done on 
 
 This is a React hook, so you have to follow the [rules of hooks](https://reactjs.org/docs/hooks-rules.html) in using it.
 
-```
+```javascript
 import useHolochainConnection from '@hylozoic/react-holochain-hooks'
 
 function MyComponent () {
@@ -58,7 +58,7 @@ Because of the interaction between asyncronous hooks and refs, wsRef is not supe
 
 The second argument to `useHolochainConnection` is a config object that's passed to [rpc-websockets](https://github.com/elpheria/rpc-websockets). See those docs for more details
 
-```
+```javascript
 const wsClientConfig = {
   autoconnect = true,
   reconnect = true,
@@ -72,7 +72,7 @@ const { callZomeRef } = useHolochainConnection(CONDUCTOR_WEBSOCKET_URL, wsClient
 
 The third argument to `useHolochainConnection` is a callback function that is called when the state of the connection changes. It's passed `true` if the connection is ready, otherwise `false`.
 
-```
+```javascript
 const [ready, setReady] = useState(false)
 const { callZomeRef } = useHolochainConnection(CONDUCTOR_WEBSOCKET_URL, {}, setReady)
 
