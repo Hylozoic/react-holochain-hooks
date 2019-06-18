@@ -1,23 +1,32 @@
 import { useEffect, useRef } from 'react'
 import { connect } from '@holochain/hc-web-client'
 
-export default function useHolochainWebClient (url) {
+export default function useHolochainWebClient (url, wsClient = {}, setReady = () => {}) {
   var callZomeRef = useRef(() => {})
   var callRef = useRef(() => {})
   var closeRef = useRef(() => {})
+  var wsRef = useRef()
 
   useEffect(() => {
     var connection
     async function connectToConductor () {
-      connection = await connect({url, wsClient: {max_reconnects: 0, reconnect_interval: 2500}})
+      connection = await connect({
+        url, 
+        wsClient: {
+          max_reconnects: 0, 
+          reconnect_interval: 2500, 
+          ...wsClient
+        }
+      })
 
-      const successMessage = '🎉 Successfully connected to Holochain!'
-      console.log(successMessage)
-      connection.ws.on('open', () => console.log(successMessage))
+      setReady(connection.ws.ready)
+      connection.ws.on('open', () => setReady(true))
+      connection.ws.on('close', () => setReady(false))      
 
       callZomeRef.current = connection.callZome  
       callRef.current = connection.call  
-      closeRef.current = connection.close  
+      closeRef.current = connection.close
+      wsRef.current = connection.ws
     }
     connectToConductor()
     return () => {
@@ -27,5 +36,5 @@ export default function useHolochainWebClient (url) {
     }
   })
 
-  return { callZomeRef, callRef, closeRef }
+  return { callZomeRef, callRef, closeRef, wsRef }
 }
