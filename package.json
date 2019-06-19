@@ -9,6 +9,10 @@
   },
   "author": "Robbie Carlton",
   "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hylozoic/react-holochain-hooks"
+  },
   "peerDependencies": {
     "react": "^16.8.0"
   },
